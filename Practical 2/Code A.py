@@ -1,0 +1,18 @@
+import pandas as pd
+print("Library Loaded.")
+df = pd.read_csv("Walmart.csv")
+print("Dataset Loaded.")
+df.head()sales = df["Weekly_Sales"]
+print("Weekly sales stored in sales.")
+print("Mean :", sales.mean())
+print("Median :", sales.median())
+print("Minimum :", sales.min())
+print("Maximum :", sales.max())
+print("Range :", sales.max() - sales.min())
+print("Variance :", sales.var())
+print("Count :", sales.count())
+print("Sum :", sales.sum())
+print("\nDescriptive Statistics")
+print(sales.describe())
+print("\nMode :")
+print(sales.mode())
